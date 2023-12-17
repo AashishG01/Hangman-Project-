@@ -1,2 +1,4 @@
 # Hangman-Project-
- Hangman is a guessing game where one player thinks of a word, and the other player tries to guess it by suggesting letters. The word is represented by dashes, and if the guessed letter is correct, it's filled in. Incorrect guesses result in drawing elements of a hangman diagram. The game ends when the word is completed or guessed correctly.
+Hangman is a paper and pencil guessing game for two or more players. One player thinks of a word and the other tries to guess it by suggesting the letters.The word to guess is represented by a row of dashes, giving the number of letters. If the guessing player suggests a letter which occurs in the word, the program writes it in all its correct positions. If the suggested letter does not occur in the word, the other player draws one element of the hangman diagram as a tally mark. The game is over when:
+
+The guessing player completes the word, or guesses the whole word correctly.
