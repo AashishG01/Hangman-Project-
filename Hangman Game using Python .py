@@ -1,9 +1,14 @@
 #Step 1 
+import Hangman_words
+import Hangman_art
+import random
 
-word_list = ["aardvark", "baboon", "camel"]
+hangman_logo = Hangman_art.logo
+print(hangman_logo)
+word_list = Hangman_words.words_list
 
 #TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
-import random
+
 n = random.randint(0,2)
 chosen_word = word_list[n]
 #TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
@@ -30,62 +35,7 @@ print(display)
 #TODO-1: - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won
 #TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
 #Set 'lives' to equal 6.
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+hangman_stages = Hangman_art.stages
 num = 6
 lives = int(num)
 #TODO-2: - If guess is not a letter in the chosen_word,
@@ -108,7 +58,7 @@ while(display.count("_")>0 and lives>0):
 
   if c == x :
     lives = lives - 1
-    print(stages[lives])
+    print(hangman_stages[lives])
     print(f"You have {lives} lives left")
   
   print(display)
